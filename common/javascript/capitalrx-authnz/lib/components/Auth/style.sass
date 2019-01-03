@@ -1,0 +1,87 @@
+@import "styles/colors"
+@import "styles/mq"
+
+.login-form
+
+  position: absolute
+  bottom: 0
+  right: 0
+  height: 100%
+  width: 100%
+
+  background: #333
+  background-size: cover
+
+  margin: 0
+  padding-top: 15%
+  padding-left: 35%
+  padding-right: 35%
+
+  @include mq($until: desktop)
+    padding-left: 30px
+    padding-right: 30px
+
+  input
+    width: 100%
+    display: inline-block
+    font-size: 16px
+
+  button.dark-bg
+    font-family: "Source Sans Pro", "sans serif"
+    font-weight: 300
+    position: relative
+    padding: 0.2em 1.5em
+    color: #fff
+    border: 1px solid #fff
+    border-radius: 3px
+    background: transparent
+    font-size: 16px
+    font-weight: 500
+    line-height: 1.7em
+    transition: all 0.2s
+    border-radius: 3px
+    float: right
+    min-width: 120px
+
+    &:hover
+      background: rgba(255, 255, 255, 0.2)
+      border: 1px solid transparent
+      cursor: pointer
+
+    &.disabled
+      background: rgba(255, 255, 255, 0.2)
+      border: 1px solid transparent
+      cursor: not-allowed
+
+  .login-logo
+    margin-bottom: 20px
+    max-width: 190px
+
+  ul
+    list-style-type: none
+    color: #fff
+    font-size: 1.4em
+    padding-left: 0
+    margin-top: 0
+
+  label
+    color: #fff
+    font-size: 18px
+    padding-bottom: 2px
+
+  .totp-side-by-side
+    display: flex
+    flex: 1
+
+  .qr-code
+    margin: 20px
+    margin-left: 0
+    text-align: center
+    width: 140px
+    min-width: 140px
+
+  .totp-instructions
+    color: #fff
+
+  .hidden
+    display: none

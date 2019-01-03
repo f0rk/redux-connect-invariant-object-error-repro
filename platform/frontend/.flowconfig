@@ -1,0 +1,15 @@
+[ignore]
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+module.name_mapper='^@/\(.*\)$' -> '<PROJECT_ROOT>/lib/\1'
+module.name_mapper.extension='sass' -> '<PROJECT_ROOT>/flow/sass.js.flow'
+suppress_comment=\\(.\\|\n\\)*\\$FlowIgnore
+experimental.const_params=true
+
+[strict]
